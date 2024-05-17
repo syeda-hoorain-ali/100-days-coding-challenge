@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 1</title>
+</head>
+
+<body>
+    <h1>Task: Create examples using alert, prompt, and confirm to interact with the user.</h1>
+
+    <script>
+        let birthday = prompt('Enter your date of birth', '2020-1-1');
+        let isConfirmed = confirm('Do you confirm this action?');
+
+        let age = new Date().getFullYear() - new Date(birthday).getFullYear();
+        alert(`You are ${age} years old`);
+    </script>
+</body>
+
+</html>
+
