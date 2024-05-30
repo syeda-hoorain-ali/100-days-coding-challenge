@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 5</title>
+</head>
+
+<body>
+
+    <h1>Task: Rewrite 'if..else' into '?'</h1>
+    <ul>
+        <li> Rewrite if..else using multiple ternary operators '?'.</li>
+        <li> For readability, it’s recommended to split the code into multiple lines.</li>
+    </ul>
+    <code>
+        let message;<br>
+    
+        if (login == 'Employee') {<br>
+            message = 'Hello';<br>
+        } else if (login == 'Director') {<br>
+            message = 'Greetings';<br>
+        } else if (login == '') {<br>
+            message = 'No login';<br>
+        } else {<br>
+            message = '';<br>
+        }<br>
+    </code>
+
+    <script>
+        let login = prompt('');
+
+        let message = (login == 'Employee') ? 'Hello' :
+            (login == 'Director') ? 'Greetings' :
+                (login == '') ? 'No login' :
+                    '';
+    </script>
+
+</body>
+
+</html>
