@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 1</title>
+</head>
+
+<body>
+
+    <h1> What will be the output of the following code?</h1>
+
+    <ul>
+        <li>
+            What's the result of OR?
+            <br>
+            <code>&nbsp; alert( null || 2 || undefined );</code>
+            <br><br>
+        </li>
+
+        <li>
+            What's the result of OR'ed alerts?
+            <br>
+            <code>&nbsp; alert( alert(1) || 2 || alert(3) );</code>
+            <br><br>
+        </li>
+
+        <li>
+            What is the result of AND?
+            <br>
+            <code>&nbsp; alert( 1 && null && 2 );</code>
+            <br><br>
+        </li>
+
+        <li>
+            What is the result of AND'ed alerts?
+            <br>
+            <code>&nbsp; alert( alert(1) && alert(2) );</code>
+            <br><br>
+        </li>
+    </ul>
+
+    <script>
+        alert(null || 2 || undefined);     // 2
+        alert(alert(1) || 2 || alert(3));  // 1, 2
+        //* Explanation: The first alert(1) shows 1, and since it returns undefined, the expression evaluates to 2, which is then alerted.
+
+        alert(1 && null && 2);             // null
+        alert(alert(1) && alert(2));       // 1, undefined
+        //* Explanation: The first alert(1) shows 1, and since it returns undefined, the expression becomes `undefined && alert(2)`.
+    </script>
+
+</body>
+
+</html>

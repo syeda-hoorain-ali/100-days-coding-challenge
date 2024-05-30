@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 2</title>
+</head>
+
+<body>
+    <h1>Task: Difference Between `??` and `||`</h1>
+    <ul>
+        <li>How does `||` treat falsy values like `0` or `""`?</li>
+        <li>How does `??` treat `null` and `undefined` specifically?</li>
+        <li>Why might you choose `??` over `||` in certain situations?</li>
+    </ul>
+
+    <script>
+        let count = 0;
+        let result1 = count || 10; // 10 (because 0 is falsy)
+        let result2 = count ?? 10; // 0 (because 0 is not null or undefined)
+        console.log(result1); // 10
+        console.log(result2); // 0
+
+        let message = "";
+        let defaultMessage = "No message";
+        let output1 = message || defaultMessage; // "No message" (because "" is falsy)
+        let output2 = message ?? defaultMessage; // "" (because "" is not null or undefined)
+        console.log(output1); // "No message"
+        console.log(output2); // ""
+    </script>
+</body>
+
+</html>

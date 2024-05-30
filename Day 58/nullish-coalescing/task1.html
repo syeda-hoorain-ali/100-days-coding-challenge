@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tasks 1</title>
+</head>
+
+<body>
+    <h1>Task: Providing Default Values with `??`</h1>
+    <ul>
+        <li> What happens if a variable is `null`?</li>
+        <li> What happens if a variable is `undefined`?</li>
+        <li> How does `??` handle these situations?</li>
+    </ul>
+
+    <script>
+        let user = null;
+        let defaultUser = "Guest";
+        let userName = user ?? defaultUser; // "Guest"
+        alert(userName);
+
+        user = undefined;
+        userName = user ?? defaultUser; // "Guest"
+        alert(userName);
+
+        user = "Alice";
+        userName = user ?? defaultUser; // "Alice"
+        alert(userName);
+
+    </script>
+</body>
+
+</html>

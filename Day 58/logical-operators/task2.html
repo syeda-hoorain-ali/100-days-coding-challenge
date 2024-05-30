@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 2</title>
+</head>
+
+<body>
+
+    <h1>Task: Check the range outside</h1>
+    <ul>
+        <li> Write an if condition to check that age is NOT between 14 and 90 inclusively.</li>
+        <li> Create two variants: the first one using NOT !, the second one – without it.</li>
+    </ul>
+
+    <script>
+        let age = 30;
+        if (!((age >= 14) && (age <= 90))) { // With NOT operator
+            alert(`You are ${age} years old`);
+        }
+
+        if ((age < 14) || (age > 90)) { // Without NOT operator
+            alert(`You are ${age} years old`);
+        }
+    </script>
+
+</body>
+
+</html>

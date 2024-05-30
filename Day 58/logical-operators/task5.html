@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 5</title>
+</head>
+
+<body>
+    <h1>Check the login</h1>
+    <ul>
+        <li>Write the code which asks for a login with prompt.</li>
+        <li>If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc - show “Canceled”, if it’s another string - then show “I don’t know you”.</li>
+
+        <li>The password is checked as follows:</li>
+        <ul>
+            <li>If it equals “TheMaster”, then show “Welcome!”,</li>
+            <li>Another string - show “Wrong password”,</li>
+            <li>For an empty string or cancelled input, show “Canceled”</li>
+        </ul>
+
+        <li>Please use nested if blocks. Mind the overall readability of the code.</li>
+        <li><b>Hint:</b> passing an empty input to a prompt returns an empty string ''. Pressing ESC during a prompt returns null.</li>
+    </ul>
+
+    <script>
+        let user = prompt("Who's there");
+
+        if (user == 'Admin') {
+            let password = prompt('Enter the password');
+
+            if (password == 'TheMaster') {
+                alert('Welcome');
+            } else if (!password) {
+                alert('Canceled');
+            } else {
+                alert('Wrong password');
+            }
+
+        } else if (!user) {
+            alert('Canceled');
+        } else {
+            alert("I don't know you");
+        }
+    </script>
+</body>
+
+</html>

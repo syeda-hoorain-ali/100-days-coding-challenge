@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 4</title>
+</head>
+
+<body>
+    <h1>A question about "if"</h1>
+
+    <ul>
+        <li>Which of these alerts are going to execute?</li>
+        <li>What will the results of the expressions be inside if(...)?</li>
+    </ul>
+
+    <code>
+        if (-1 || 0) alert( 'first' );<br>
+        if (-1 && 0) alert( 'second' );<br>
+        if (null || -1 && 1) alert( 'third' );<br>
+    </code>
+
+    <script>
+        if (-1 || 0) alert('first');          // true
+        if (-1 && 0) alert('second');         // false
+        if (null || -1 && 1) alert('third');  // true 
+    </script>
+</body>
+
+</html>
