@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 2</title>
+</head>
+
+<body>
+    <h1>Task: Which values does the while loop show?</h1>
+
+    <ul>
+        <li> For every loop iteration, write down which value it outputs and then compare it with the solution.</li>
+        <li> Both loops alert the same values, or not?</li>
+
+        <li> The prefix form ++i:</li>
+        <code>
+            let i = 0;<br>
+            while (++i &lt; 5) alert( i );<br>
+        </code>
+
+        <li> The postfix form i++:</li>
+        <code>
+            let i = 0;<br>
+            while (i++ &lt; 5) alert( i );<br>
+        </code>
+    </ul>
+
+    <script>
+        //* The prefix form ++i:
+        let i = 0;
+        while (++i < 5) alert(i);
+
+        //* The postfix form i++:
+        i = 0;
+        while (i++ < 5) alert(i);
+
+        // The prefix form (++i) alerts `1, 2, 3, 4`, while the postfix form (i++) alerts `1, 2, 3, 4, 5`.
+    </script>
+</body>
+
+</html>

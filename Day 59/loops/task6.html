@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 6</title>
+</head>
+
+<body>
+    <h1>Task: Repeat until the input is correct</h1>
+    <ul>
+        <li>Write a loop which prompts for a number greater than 100. If the visitor enters another number - ask them to
+            input again.</li>
+        <li>The loop must ask for a number until either the visitor enters a number greater than 100 or cancels the
+            input/enters an empty line.</li>
+        <li>Here we can assume that the visitor only inputs numbers. There’s no need to implement a special handling for
+            a non-numeric input in this task.</li>
+    </ul>
+
+    <script>
+        while (true) {
+            let number = prompt('Enter a number greater than 100', '');
+
+            if (number === null || number === '') break;  // Exit the loop if the input is canceled or empty
+            if (Number(number) > 100) break;  // Exit the loop if the input is greater than 100
+
+            // If the input is not greater than 100, continue prompting
+        }
+    </script>
+</body>
+
+</html>

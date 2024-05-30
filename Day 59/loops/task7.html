@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 7</title>
+</head>
+
+<body>
+    <h1>Task: Output prime numbers</h1>
+    <ul>
+        <li>An integer number greater than 1 is called a prime if it cannot be divided without a remainder by anything except 1 and itself.</li>
+        <li>In other words, n > 1 is a prime if it can’t be evenly divided by anything except 1 and n.</li>
+        <li>For example, 5 is a prime, because it cannot be divided without a remainder by 2, 3 and 4.</li>
+        <li><b>Write the code which outputs prime numbers in the interval from 2 to n.</b></li>
+        <li>For n = 10 the result will be 2,3,5,7.</li>
+        <li>P.S. The code should work for any n, not be hard-tuned for any fixed value.</li>
+    </ul>
+
+    <script>
+        let n = 10;
+
+        for (let i = 2; i <= n; i++) {
+            let isPrime = true;
+
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) alert(i);
+        }
+    </script>
+</body>
+
+</html>

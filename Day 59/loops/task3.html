@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 3</title>
+</head>
+
+<body>
+    <h1>Task: Which values get shown by the "for" loop?</h1>
+    <ul>
+        <li>For each loop write down which values it is going to show. Then compare with the answer.</li>
+        <li>Both loops alert same values or not?</li>
+
+        <li>The postfix form:</li>
+        <code>
+            for (let i = 0; i &lt; 5; i++) alert( i );<br>
+        </code>
+
+        <li>The prefix form:</li>
+        <code>
+            for (let i = 0; i &lt; 5; ++i) alert( i );<br>
+        </code>
+    </ul>
+
+    <script>
+        //* The postfix form i++:
+        for (let i = 0; i < 5; i++) alert(i);
+
+        //* The prefix form ++i:
+        for (let i = 0; i < 5; ++i) alert(i);
+
+        // Both the postfix (i++) and prefix (++i) forms in the for loop alert the same values: `0, 1, 2, 3, 4`.
+    </script>
+</body>
+
+</html>
