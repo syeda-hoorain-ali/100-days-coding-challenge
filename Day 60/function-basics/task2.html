@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 2</title>
+</head>
+
+<body>
+    <h1>Task: Rewrite the function using '?' or '||'</h1>
+    <ul>
+        <li>The following function returns true if the parameter age is greater than 18.</li>
+        <li>Otherwise it asks for a confirmation and returns its result.</li>
+        <code>
+            function checkAge(age) {<br>
+                if (age > 18) {<br>
+                    return true;<br>
+                } else {<br>
+                    return confirm('Did parents allow you?');<br>
+                }<br>
+            }<br>
+        </code>
+
+        <li>Rewrite it, to perform the same, but without if, in a single line.</li>
+        <li>Make two variants of checkAge:</li>
+        <ol>
+            <li> Using a question mark operator ?</li>
+            <li> Using OR ||</li>
+        </ol>
+    </ul>
+
+    <script>
+        //* Using the Question Mark Operator ?
+        function checkAge(age) {
+            return age > 18 ? true : confirm('Did parents allow you?');
+        }
+
+        //* Using OR ||
+        function checkAge2(age) {
+            return age > 18 || confirm('Did parents allow you?');
+        }
+
+        alert(checkAge(20));
+        alert(checkAge2(15));
+    </script>
+</body>
+
+</html>
