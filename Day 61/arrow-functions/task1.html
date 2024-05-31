@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 1</title>
+</head>
+
+<body>
+    <h1>Task: Replace Function Expressions with arrow functions in the code below:</h1>
+    <code>
+        function ask(question, yes, no) {<br>
+            if (confirm(question)) yes();<br>
+            else no();<br>
+        }<br>
+    
+        ask(<br>
+        "Do you agree?",<br>
+            function() { alert("You agreed."); },<br>
+            function() { alert("You canceled the execution."); }<br>
+        );<br>
+    </code>
+
+    <script>
+        function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+        }
+
+        ask(
+            "Do you agree?",
+            () => alert("You agreed."),
+            () => alert("You canceled the execution.")
+        );
+    </script>
+</body>
+
+</html>
