@@ -1,0 +1,21 @@
+{
+  "name": "day-79",
+  "version": "1.0.0",
+  "description": "Basics of Authentication",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/base-64": "^1.0.2",
+    "@types/express": "^4.17.21"
+  }
+}
