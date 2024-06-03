@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Facebook</title>
+    <link rel="icon" type="image/png" href="./logo.png"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+        const root = ReactDOM.createRoot(app);
+
+        function getRandomNumber(max = 100) {
+            return Math.ceil(Math.random() * max);
+        }
+
+        function Header({links}) {
+            return (<nav>
+                <div id="logo"></div>
+                <ul>
+                    {links.map((text, index) => (
+                        <li key={index}><a href="#">{text}</a></li>
+                    ))}
+                </ul>
+            </nav>)
+        }
+
+        function Post({content, img}) {
+            const [likes, setLikes] = React.useState(getRandomNumber())
+            const [share, setShare] = React.useState(getRandomNumber())
+
+            return (<div className="card">
+                <p>{content}</p>
+                <img src={`./posts/${img}.jpeg`} alt=""/>
+                <div>
+                    <span onClick={() => setLikes(likes + 1)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="#005eff" d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/>
+                        </svg>
+                        {likes}
+                    </span>
+
+                    <span onClick={() => setShare(share + 1)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/>
+                        </svg>
+                        {share}
+                    </span>
+                </div>
+            </div>)
+        }
+
+        function Article() {
+            return (<article>
+                <h1>Facebook</h1>
+                <div class="container">                
+                    <Post content="Why we use enum and tuple in typescript ???" img="post1"/>
+                    <Post content="💸😂" img="post2"/>
+                    <Post content="....\n..." img="post3"/>
+                    <Post content="Code comments be like" img="post4"/>
+                    <Post content={"While success\nTry Again"} img="post5"/>
+                    <Post content={"It's JavaScript 😎👌\n"} img="post6"/>
+                    <Post content={"How id you fix the Bug?\n Me: Commented the code"} img="post7"/>
+                    <Post content="Trying random stuff for hours instead of reading the documentation" img="post8"/>
+                </div>
+            </article>)
+        }
+
+        function Footer() {
+            const date = new Date();
+            const year = date.getFullYear()
+            return (<footer>All right reserved &copy; {year}</footer>)
+        }
+
+        function HomePage() {
+            return (
+              <div>
+                {/* Nesting the Header component */}
+                <Header links={['Home', 'About', 'Contact']}/>
+
+                {/* Nesting the Article component */}
+                <Article/>
+
+                {/* Nesting the Footer component */}
+                <Footer/>
+            </div>
+            );
+          }
+        
+        root.render(<HomePage/>);
+    </script>
+</body>
+
+</html>
