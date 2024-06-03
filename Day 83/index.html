@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with React</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+        const root = ReactDOM.createRoot(app);
+
+        function Header({links}) {
+            return (<nav>
+                <div id="logo">React.js</div>
+                <ul>
+                    {links.map((text, index) => (
+                        <li key={index}><a href="#">{text}</a></li>
+                    ))}
+                </ul>
+            </nav>)
+        }
+
+        function Article() {
+            return (<article>
+                <h1>Components</h1>
+                <p>User interfaces can be broken down into smaller building blocks called <b>components</b>.</p>
+                
+                <p>Components allow you to build self-contained, reusable snippets of code. If you think of components as <b>LEGO bricks</b>, you can take these individual bricks and combine them together to form larger structures. If you need to update a piece of the UI, you can update the specific component or brick.</p>
+
+                <p>This modularity allows your code to be more maintainable as it grows because you can add, update, and delete components without touching the rest of our application.</p>
+
+                <p>The nice thing about React components is that they are just JavaScript. Let's see how you can write a React component, from a JavaScript perspective:</p>
+            </article>)
+        }
+
+        function Footer() {
+            const date = new Date();
+            const year = date.getFullYear()
+            return (<footer>All right reserved &copy; {year}</footer>)
+        }
+
+        function HomePage() {
+            return (
+              <div>
+                {/* Nesting the Header component */}
+                <Header links={['Home', 'About', 'Contact']}/>
+
+                {/* Nesting the Article component */}
+                <Article/>
+
+                {/* Nesting the Footer component */}
+                <Footer/>
+            </div>
+            );
+          }
+        
+        root.render(<HomePage/>);
+    </script>
+</body>
+
+</html>
